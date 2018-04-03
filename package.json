@@ -1,6 +1,6 @@
 {
   "name": "ChatHealth",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "ChatHealth Practitioner Console",
   "main": "main.js",
   "build": {
