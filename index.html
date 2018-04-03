@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <base href="./">
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=11" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+
+        <link rel="stylesheet" href="./css/normalize.css"/>
+        <link rel="stylesheet" href="./css/theme.css"/>
+        <link rel="stylesheet" href="./css/iziToast.min.css">
+        <link rel="stylesheet" href="./css/sweetalert2.min.css">
+        <link rel="stylesheet" href="./css/flatpickr.min.css"/>
+
+        <script src="./js/pdfkit.js"></script>
+        <script src="./js/blob-stream.js"></script>
+        <script src="./js/pouchdb.min.js"></script>
+        <script src="./js/skate.js"></script>
+        <script src="./js/flatpickr.min.js"></script>
+        <script src="./js/client.js"></script>
+    </head>
+
+    <body>
+
+		<script>
+		    require('electron').ipcRenderer.on('message', (event, message) => {
+      			console.log(message)  // Prints 'whoooooooh!'
+    		})
+  		</script>
+
+        <div id="body">
+        
+        </div>
+
+        <script src="./js/setup.js"></script>
+
+    </body>
+
+</html>
