@@ -141,45 +141,10 @@ html {
     --default-accent-font-color: white;
 
     /* STATS */
-    --inbox: var(--default-accent-color);
     --outbox: #67c067;
-    --sent: #de5e59;
 
     /* BORDERS */
     --default-border-color: #ebebeb;
-
-    /* HEADER HEIGHT */
-    --default-header-height: 60px;
-
-    /* BUTTONS */
-    /* --app-primary-button-color: #1f314c; */
-    --app-primary-button-color: var(--default-accent-color);
-    --app-primary-button-font: white;
-    --app-primary-button-border: var(--app-primary-button-color);
-
-    --app-success-button-color: #44b380;
-    --app-success-button-font: white;
-    --app-success-button-border: var(--app-success-button-color);
-
-    --app-secondary-button-color: #f2f2f2;
-    --app-secondary-button-font: var(--default-font-color);
-    --app-secondary-button-border: #dddddd;
-    --app-secondary-button-hover: #ebebeb;
-
-    --app-danger-button-color: #f04747;
-    --app-danger-button-font: white;
-    --app-danger-button-border: var(--app-danger-button-color);
-
-    --app-warning-button-color: #f0ad4e;
-    --app-warning-button-font: white;
-    --app-warning-button-border: var(--app-warning-button-color);
-
-    --app-login-button-color: var(--app-primary-button-color);
-    --app-login-button-font: var(--app-primary-button-font);
-
-    --default-popout-button-bg: var(--default-bg-color-light);
-    --default-popout-button-bg-hover: var(--default-bg-color-dark);
-    --default-popout-button-font: var(--default-font-color-lighter);
 
     /* CALENDAR */
     --calendar-event-color: var(--default-accent-color);
@@ -188,7 +153,10 @@ html {
     --calendar-repeating-event-font-color: white;
     --calendar-allday-event-color: #68b3f3;
     --calendar-allday-event-font-color: black;
-    
+    --calendar-system-event-color: gray;
+    --calendar-system-event-font-color: white;
+    --calendar-exception-event-color: #EF5350;
+    --calendar-exception-event-font-color: white;    
 }
 
 

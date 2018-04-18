@@ -1,16 +1,12 @@
-var username = localStorage.username;
-var password = localStorage.password;
-
-var state = {
-    token: "nktest",
-    redirect: "http://localhost:9998/"
-};
-
 var config = {
 
     rest: {
 
-        baseUri: "https://lhischata1.cti-paging.com:8443/chathealth/"
+        // DEV
+        // baseUri: "https://lhischata1.cti-paging.com/chathealth/"
+
+        // TEST
+        baseUri: "https://lhisinternal1.cti-paging.com/chathealth/"
     },
 
     idp: {
@@ -28,20 +24,10 @@ var config = {
 
         authorizationUri: "oauth/authorize",
         accessTokenUri: "oauth/token",
-        profileLookupUri: "me",
-
-        state: btoa(JSON.stringify(state))
+        profileLookupUri: "me"
     },
 
     useIdp: true
-}
-
-if (username && password) {
-
-    config.user = {
-        name: username,
-        password: password
-    };
 }
 
 window.wc = new ClientManager("wc", "body", config);

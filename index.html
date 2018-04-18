@@ -16,8 +16,6 @@
         <link rel="stylesheet" href="./css/sweetalert2.min.css">
         <link rel="stylesheet" href="./css/flatpickr.min.css"/>
 
-        <script src="./js/pdfkit.js"></script>
-        <script src="./js/blob-stream.js"></script>
         <script src="./js/pouchdb.min.js"></script>
         <script src="./js/skate.js"></script>
         <script src="./js/flatpickr.min.js"></script>
@@ -26,15 +24,14 @@
 
     <body>
 
+        <div id="body">
+        </div>
+		
 		<script>
 		    require('electron').ipcRenderer.on('message', (event, message) => {
-      			console.log(message)  // Prints 'whoooooooh!'
+      			console.log(message)
     		})
   		</script>
-
-        <div id="body">
-        
-        </div>
 
         <script src="./js/setup.js"></script>
 

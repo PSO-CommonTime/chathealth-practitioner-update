@@ -88,6 +88,8 @@ function sendStatusToWindow(text) {
 function createDefaultWindow() {
   win = new BrowserWindow({ width: 1600, height: 900, center: true });
   // win.maximize();
+  
+  win.webContents.executeJavaScript(`window.localStorage.setItem("appVersion", "${app.getVersion()}")`);
 
   win.on('closed', () => {
     win = null;
@@ -155,6 +157,8 @@ app.on('ready', function() {
   // Create the Menu
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);
+  
+  autoUpdater.checkForUpdatesAndNotify();
 
   createDefaultWindow();
 

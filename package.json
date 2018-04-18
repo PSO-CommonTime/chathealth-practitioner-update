@@ -1,6 +1,6 @@
 {
   "name": "ChatHealth",
-  "version": "1.0.19",
+  "version": "0.0.4-int-test",
   "description": "ChatHealth Practitioner Console",
   "main": "main.js",
   "build": {
@@ -8,15 +8,49 @@
     "mac": {
       "category": "chathealth.console.practitioner"
     },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
     "protocols": {
       "name": "electron-deep-linking",
-      "schemes": ["chathealth"]
+      "schemes": [
+        "chathealth"
+      ]
     }
   },
   "scripts": {
+    "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "release": "build"
+    "new": "electron-builder --win -p always"
   },
   "repository": "https://github.com/PSO-CommonTime/chathealth-practitioner-update.git",
   "keywords": [
@@ -25,20 +59,14 @@
     "CommonTime"
   ],
   "author": "CommonTime",
-  "license": "CC0-1.0",
+  "license": "MIT",
   "dependencies": {
-    "@zalando/oauth2-client-js": "0.0.18",
-    "client-oauth2": "^4.1.0",
-    "electron-log": "^2.2.11",
-    "electron-updater": "^2.18.2",
-    "izitoast": "^1.1.5",
-    "moment": "^2.18.1",
-    "pouchdb": "^6.3.4",
-    "skatejs": "^4.6.7",
-    "sweetalert2": "^6.9.1"
+    "electron-log": "^2.2.14",
+    "electron-updater": "^2.21.3"
   },
   "devDependencies": {
-    "electron": "~1.7.8",
-    "electron-builder": "^19.45.5"
+    "electron": "~1.8.4",
+    "electron-builder": "^20.9.0",
+    "electron-updater": "^2.21.8"
   }
 }
